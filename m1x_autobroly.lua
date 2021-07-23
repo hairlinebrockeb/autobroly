@@ -1,18 +1,9 @@
-Move1 = "Meteor Crash"
-Move2 = "Anger Rush"
-Move3 = "Wolf Fang Fist"
-Move4 = "Neo Wolf Fang Fist"
-Move5 = "Deadly Dance"
-Move6 = "TS Molotov"
-Move7 = "Flash Skewer"
-Move8 = "Sweep Kick"
 
 local whitelisted = {136460866, 444556469, 301757114}
 local plrForW = game.Players.LocalPlayer
-local antileech = false -- set to true if u want people to join u :D
 
-local formup = 0
-local formtime = 90
+
+
 
 for i,v in pairs(whitelisted) do
         
