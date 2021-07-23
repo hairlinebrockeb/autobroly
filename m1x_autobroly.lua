@@ -1,5 +1,5 @@
 
-local whitelisted = {136460866, 444556469, 301757114}
+local whitelisted = {136460866, 444556469, 301757114, 2704628512}
 local plrForW = game.Players.LocalPlayer
 
 
