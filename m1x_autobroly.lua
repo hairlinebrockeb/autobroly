@@ -7,11 +7,24 @@ Move6 = "TS Molotov"
 Move7 = "Flash Skewer"
 Move8 = "Sweep Kick"
 
-
+local whitelisted = {}
+local plrForW = game.Players.LocalPlayer
 local antileech = false -- set to true if u want people to join u :D
 
 local formup = 0
 local formtime = 90
+
+for i,v in pairs(whitelisted) do
+        
+     if v.Name == plrForW.Name then
+            
+            print(plrForW.userId.."is whitelisted")
+        else
+        local placeid = game.PlaceId
+        game:GetService("TeleportService"):teleport(placeid)
+      end
+    
+end
 
 -- this waits for it to go to formtime
 
