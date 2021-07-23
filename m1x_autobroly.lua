@@ -16,7 +16,7 @@ local formtime = 90
 
 for i,v in pairs(whitelisted) do
         
-     if v.Name == plrForW.Name then
+     if v == plrForW.userId then
             
             print(plrForW.userId.."is whitelisted")
         else
