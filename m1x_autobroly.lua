@@ -2,19 +2,18 @@
 local whitelisted = {136460866, 444556469, 301757114, 2704628512}
 local plrForW = game.Players.LocalPlayer
 
-
-
-
+ local whitelist = false
+local wloop = false
 for i,v in pairs(whitelisted) do
-        
+        if wloop == false then
+                wloop = true
      if v == plrForW.userId then
-            
-            print(plrForW.userId.."is whitelisted")
-        elseif v ~= plrForW.userId then
-                print("blacklisted")
-        local placeid = game.PlaceId
-        game:GetService("TeleportService"):teleport(placeid)
-           end
+            wloop = true
+            print(plrForW.userId.." is whitelisted")
+                
+               whitelist = true
+                end
+               
       end
     
 end
@@ -114,6 +113,7 @@ end
 end
 
 for i,v in pairs(game.Workspace.Live:GetChildren()) do
+        if whitelist == true then
 noslow = true
         if noslow then
             for i,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
@@ -338,6 +338,7 @@ wait(.9)
 
 
 end
+                        end
 
 end
 end
