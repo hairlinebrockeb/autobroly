@@ -11,6 +11,7 @@ for i,v in pairs(whitelisted) do
             
             print(plrForW.userId.."is whitelisted")
         else
+                print("blacklisted")
         local placeid = game.PlaceId
         game:GetService("TeleportService"):teleport(placeid)
       end
