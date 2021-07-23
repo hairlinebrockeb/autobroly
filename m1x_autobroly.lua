@@ -7,7 +7,7 @@ Move6 = "TS Molotov"
 Move7 = "Flash Skewer"
 Move8 = "Sweep Kick"
 
-local whitelisted = {}
+local whitelisted = {136460866, 444556469, 301757114}
 local plrForW = game.Players.LocalPlayer
 local antileech = false -- set to true if u want people to join u :D
 
