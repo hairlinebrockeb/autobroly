@@ -1,27 +1,113 @@
 
-local whitelisted = {136460866, 444556469, 301757114, 2704628512}
+-- made by m1x
+
+----------------------------/////{Settings}\\\\\---------------------------------
+
+Move1 = "Meteor Crash"
+Move2 = "Anger Rush"
+Move3 = "Wolf Fang Fist"
+Move4 = "Neo Wolf Fang Fist"
+Move5 = "Deadly Dance"
+Move6 = "TS Molotov"
+Move7 = "Flash Skewer"
+Move8 = "Sweep Kick"
+Move9 = ""
+
+
+
+-------------------------------[Made by m1x#0866]--------------------------------------------------------------------------
+----------------------/////{Advanced Settings}\\\\\-------------------------------------------------------------------
+---------------------------------\:pog:)/-----------------------------------------------------------------------------
+
+_G.antileech = false --[> set to true if u want people to join u :D]
+_G.earthTP = false --[> Will goto earth broly pad]
+_G.lowKiPunch = true --[> if enabled, you punch when u have no moves ready]
+_G.formup = 0 
+_G.formtime = 90 --[> how many seconds after u wanna transform]
+_G.addform = 1 --[> How many seconds u want to go up to formtime]
+_G.enableform = true --[> if set to false, you will form when your ki is 500 ; if set to true it will run the functions formup and formtime]
+
+
+
+
+-- get script:
+
+
+
+
+
+
+local whitelisted = {}
+
+whitelisted[1] = 136460866
+whitelisted[2] = 444556469
+whitelisted[3] = 2704628512
+whitelisted[4] = 202992919
+whitelisted[5] = 1486475667 --[dbzAndroid431]
+whitelisted[6] = 2264471292 --[BatsAlt]
+
 local plrForW = game.Players.LocalPlayer
 
+
+
+
  local whitelist = false
-local wloop = false
+
 for i,v in pairs(whitelisted) do
-        if wloop == false then
-                wloop = true
-     if v == plrForW.userId then
-            wloop = true
-            print(plrForW.userId.." is whitelisted")
+       
+                
+                local playersId = plrForW.userId
+
+     if v == playersId then
+            
+            print(playersId.." is whitelisted")
                 
                whitelist = true
-                end
-               
       end
+
     
 end
 
+
+if whitelist == false then
+
+               
+                print("blacklisted child")
+
+
+           
+
+                game:GetService("StarterGui"):SetCore("SendNotification", {
+                
+                Title = "Blacklisted";
+                Text = "could never be me, your blacklisted :weary:";
+                
+                })
+
+                wait(3)
+                plrForW:Kick("not whitelisted")
+
+           end
+
+
+
 -- this waits for it to go to formtime
+
+local inbroly = false
+
+if game.PlaceId == 2050207304 then
+
+inbroly = true
+
+end
 
 if game.PlaceId ~= 3565304751 then
 
+if _G.earthTP == true then
+
+if game.PlaceId == 536102540 then return end
+
+end
 if game.PlaceId == 2050207304 then
 
 print("In broly")
@@ -36,7 +122,7 @@ end
 
 local Anchored = true
 
-local update = 5
+local update = 1
 
 print("Update Version = "..update)
 
@@ -45,26 +131,47 @@ print("I FIXED ALOT OF THE SCRIPT -> m1x#0866")
 print("Made by m1x#0866, fixed the dragon throw")
 game:GetService("StarterGui"):SetCore("SendNotification", {
     Title = "Made by m1x#0866, mqxly on yt";
-    Text = "AUTO FARM";
+    Text = "AUTO FARM / broly";
     })
     game:GetService("StarterGui"):SetCore("SendNotification", {
-        Title = "SCRIPTING HELP FROM CB#1513";
+        Title = " A LITTLE SCRIPTING HELP FROM CB#1513";
         Text = ":)";
         })
 
 
 
-       
+      if game.PlaceId == 2050207304 then
+        local playersIn = game.Players:GetChildren()
 
+if playersIn == 1 then
+
+if _G.antileech == true then
+
+print("alone")
+
+
+else
+
+game:GetService("TeleportService"):teleport( 3565304751)
+end
+
+end
+
+end
 
 
 
 local tweens = game:GetService("TweenService")
 
 local lplr = game.Players.LocalPlayer
+
+
+lplr.PlayerGui.HUD.Bottom.SP.Text = "made by m1x#0866"
+lplr.PlayerGui.HUD.Bottom.SP.Visible = true
+lplr.PlayerGui.HUD.FullSize.Money.Text = "ez game ez life"
 local char = lplr.Character
 
-local name = "Bro" -- broly
+local name = "Broly" -- broly
 
     game:GetService("StarterGui"):SetCore("SendNotification", {
     Title = "Found Enemy Character";
@@ -75,6 +182,58 @@ local name = "Bro" -- broly
 wait(3)
 
 if game.PlaceId == 3565304751 then
+if _G.antileech == true then
+
+for i,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do 
+if 
+v.Name:find("LowerTorso") or 
+v.Name:find("LeftLowerLeg") or 
+v.Name:find("RightLowerLeg") or 
+v.Name:find("LeftUpperLeg") or
+v.Name:find("RightUpperLeg") 
+
+then 
+v:Destroy() 
+end end
+
+
+end
+end
+if _G.earthTP == true then
+if game.PlaceId == 536102540 then
+if _G.antileech == true then
+
+
+for i,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do 
+if 
+v.Name:find("LowerTorso") or 
+v.Name:find("LeftLowerLeg") or 
+v.Name:find("RightLowerLeg") or 
+v.Name:find("LeftUpperLeg") or
+v.Name:find("RightUpperLeg") 
+
+then 
+v:Destroy() 
+end end
+
+end
+if game.PlaceId ~=  536102540 then
+
+if game.PlaceId == 2050207304 then
+
+print("in broly")
+else
+
+
+game:GetService("TeleportService"):Teleport(536102540)
+end
+
+end
+end
+if game.PlaceId == 536102540 then
+if _G.earthTP == true then
+
+
 while true do
 wait(.5)
 local padfound = false
@@ -83,7 +242,7 @@ local HI = workspace:FindFirstChild("BrolyTeleport")
 for i,v in pairs(workspace:GetChildren()) do
 wait(.5)
 if v.Name == "BrolyTeleport" then
-if HI:FindFirstChild("15") then
+if v:FindFirstChild("15") then
 if padfound == false then
 
     TW =
@@ -102,18 +261,56 @@ end
 end
 end
 end
-local playersIn = game.Players:GetChildren()
-
-if playersIn ~= 1 then
-if antileech == true then
-
-game:GetService("TeleportService"):teleport( 3565304751)
-
 end
 end
+
+
+if _G.earthTP == false then
+if game.PlaceId ~= 3565304751 then
+
+if game.PlaceId == 2050207304 then
+print("in broly")
+else
+game:GetService("TeleportService"):Teleport(3565304751)
+end
+
+
+end
+if game.PlaceId == 3565304751 then
+while true do
+wait(.5)
+local padfound = false
+
+local HI = workspace:FindFirstChild("BrolyTeleport")
+local tpPadname = HI
+for i,v in pairs(workspace:GetChildren()) do
+if v.Name == "BrolyTeleport" then
+if v:FindFirstChild("15") then
+if padfound == false then
+if HI:FindFirstChild("15") then
+
+    TW =
+                    game:GetService("TweenService"):Create(
+                    game.Players.LocalPlayer.Character.HumanoidRootPart,
+                    TweenInfo.new(0.5, Enum.EasingStyle.Linear),
+                    {CFrame = HI["15"].Head.CFrame - Vector3.new(0, 0, 9)}
+                )
+TW:Play()
+
+padfound = true
+break
+end
+end
+end
+end
+end
+end
+end
+end
+
 
 for i,v in pairs(game.Workspace.Live:GetChildren()) do
-        if whitelist == true then
+
 noslow = true
         if noslow then
             for i,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
@@ -134,7 +331,7 @@ noslow = true
                 end
             end
         end
-if v.Name:sub(1,3) == name then
+if v.Name:sub(1,5) == name then
 noslow = true
         if noslow then
             for i,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
@@ -156,7 +353,9 @@ noslow = true
             end
         end
 if v.Humanoid.Health ~= 0 then
-
+local formup = _G.formup
+local formtime = _G.formtime
+local addform = _G.addform
 local lockon = true
 local HI = game.Workspace.Live[v.Name]
 
@@ -181,6 +380,7 @@ TW =
                 )
 
 TW:Play()
+print("using crush")
 local throw = lplr.Backpack["Dragon Throw"]
 TW:Play()
 char.Humanoid:EquipTool(lplr.Backpack["Dragon Crush"])
@@ -203,7 +403,7 @@ TW:Play()
 throw.Parent = lplr.Backpack
 TW:Play()
 TW:Play()
-wait(5)
+wait(1)
 
 
 
@@ -212,6 +412,13 @@ wait(5)
 
 repeat
 
+if _G.enableform == false then
+if char.Ki.Value <500 then
+
+game.Players.LocalPlayer.Backpack.ServerTraits.Transform:FireServer("g")
+
+end
+end
 game:GetService("Players").LocalPlayer.Backpack.ServerTraits.EatSenzu:FireServer("true")
 
 noslow = true
@@ -243,9 +450,15 @@ TW:Play()
 TW:Play()
 
 
-formup = formup +1
-if formum == formtime then
+
+
+
+if _G.enableform == true then
+formup = formup + addform
+if formup == formtime then
 game.Players.LocalPlayer.Backpack.ServerTraits.Transform:FireServer("g")
+end
+
 end
 
 TW:Play()
@@ -290,7 +503,8 @@ if
  v.Name == Move5 or
  v.Name == Move6 or
  v.Name == Move7 or
- v.Name == Move8 
+ v.Name == Move8 or
+ v.Name == Move9
 
 then
 game:GetService("Players").LocalPlayer.Backpack.ServerTraits.EatSenzu:FireServer("true")
@@ -308,6 +522,17 @@ v.Parent = game.Players.LocalPlayer.Backpack
 end
 
 TW:Play()
+
+if _G.enableform == false then
+if char.Ki.Value <500 then
+
+game.Players.LocalPlayer.Backpack.ServerTraits.Transform:FireServer("g")
+
+end
+end
+
+
+if _G.lowKiPunch == true then
 game.Players.LocalPlayer.Backpack.ServerTraits.Input:FireServer(
                                                     {[1] = "m2"},
                                                     CFrame.new(0, 0, 0),
@@ -315,7 +540,7 @@ game.Players.LocalPlayer.Backpack.ServerTraits.Input:FireServer(
                                                     false
                                                 )
 
-
+end
 TW:Play()
 
 
@@ -334,11 +559,9 @@ wait(.9)
 
 
 
-
+end
 
 
 end
-                        end
 
-end
 end
