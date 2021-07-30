@@ -1,32 +1,4 @@
 
--- made by m1x
-
-----------------------------/////{Settings}\\\\\---------------------------------
-
-Move1 = "Meteor Crash"
-Move2 = "Anger Rush"
-Move3 = "Wolf Fang Fist"
-Move4 = "Neo Wolf Fang Fist"
-Move5 = "Deadly Dance"
-Move6 = "TS Molotov"
-Move7 = "Flash Skewer"
-Move8 = "Sweep Kick"
-Move9 = ""
-
-
-
--------------------------------[Made by m1x#0866]--------------------------------------------------------------------------
-----------------------/////{Advanced Settings}\\\\\-------------------------------------------------------------------
----------------------------------\:pog:)/-----------------------------------------------------------------------------
-
-_G.antileech = false --[> set to true if u want people to join u :D]
-_G.earthTP = false --[> Will goto earth broly pad]
-_G.lowKiPunch = true --[> if enabled, you punch when u have no moves ready]
-_G.formup = 0 
-_G.formtime = 90 --[> how many seconds after u wanna transform]
-_G.addform = 1 --[> How many seconds u want to go up to formtime]
-_G.enableform = true --[> if set to false, you will form when your ki is 500 ; if set to true it will run the functions formup and formtime]
-
 
 
 
