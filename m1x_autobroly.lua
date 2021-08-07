@@ -40,7 +40,7 @@ for i,v in pairs(whitelisted) do
     
 end
 
-
+--[[
 if whitelist == false then
 
                
@@ -61,7 +61,7 @@ if whitelist == false then
 
            end
 
-
+]]
 
 -- this waits for it to go to formtime
 
