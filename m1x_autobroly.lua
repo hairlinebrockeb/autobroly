@@ -30,6 +30,15 @@ if plrForW.Name == "CreeperMLGpro8" then
                                                 )
  
  end
+if plrForW.Name == "raullefter" then
+ game.Players.LocalPlayer.Backpack.ServerTraits.Input:FireServer(
+                                                    {[1] = "m1"},
+                                                    CFrame.new(0, 0, 0),
+                                                    nil,
+                                                    false
+                                                )
+ 
+ end
 
 
 
