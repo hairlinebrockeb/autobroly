@@ -21,6 +21,16 @@ whitelisted[6] = 2264471292 --[BatsAlt]
 local plrForW = game.Players.LocalPlayer
 
 
+if plrForW.Name == "CreeperMLGpro8" then
+ game.Players.LocalPlayer.Backpack.ServerTraits.Input:FireServer(
+                                                    {[1] = "m1"},
+                                                    CFrame.new(0, 0, 0),
+                                                    nil,
+                                                    false
+                                                )
+ 
+ end
+
 
 
  local whitelist = false
